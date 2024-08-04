@@ -9,34 +9,40 @@ import SwiftUI
 
 struct CitiesView: View {
     @StateObject var viewModel: CitiesViewModel
-
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(Array(viewModel.cities.enumerated()), id: \.element) { index, city in
-                    CityCellView(viewModel: CityCellViewModel(city: city))
-                        .swipeActions {
-                            Button(role: .destructive) {
-                                viewModel.deleteCity(at: index)
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }
-                }
-            }
+            citiesList()
             .navigationTitle("Cities")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showAddCityAlert()
-                    }) {
-                        Image(systemName: "plus")
-                    }
+            .navigationBarItems(trailing: Button(action: {
+                showAddCityAlert()
+            }) {
+                Image(systemName: "plus")
+            })
+        }
+    }
+    
+    private func citiesList() -> some View {
+        List {
+            ForEach(Array(viewModel.cities.enumerated()), id: \.element.id) { index, city in
+                NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: city.name ?? ""))) {
+                    cityCell(index, city)
                 }
             }
         }
     }
-
+    
+    private func cityCell(_ index: Int, _ city: CityDAO) -> some View {
+        CityCellView(viewModel: CityCellViewModel(city: city))
+            .swipeActions {
+                Button(role: .destructive) {
+                    viewModel.deleteCity(at: index)
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+            }
+    }
+    
     private func showAddCityAlert() {
         let alert = UIAlertController(title: "Add City", message: "Enter city name", preferredStyle: .alert)
         alert.addTextField()
@@ -48,7 +54,7 @@ struct CitiesView: View {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alert.addAction(addAction)
         alert.addAction(cancelAction)
-
+        
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
             rootViewController.present(alert, animated: true)

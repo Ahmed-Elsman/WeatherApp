@@ -14,7 +14,7 @@ protocol CitiesViewModeling: ObservableObject {
     func fetchCities()
 }
 
-class CitiesViewModel: ObservableObject, CitiesViewModeling {
+final class CitiesViewModel: ObservableObject, CitiesViewModeling {
     @Published private(set) var cities: [CityDAO] = []
     private var coreDataManager: CoreDataManaging
 
