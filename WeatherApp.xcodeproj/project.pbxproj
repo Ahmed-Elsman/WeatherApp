@@ -36,6 +36,7 @@
 		277AF2312C5FAF6300270AAE /* NetworkManaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2302C5FAF6300270AAE /* NetworkManaging.m */; };
 		277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2322C5FAF8100270AAE /* APIEndpoint.m */; };
 		277AF23A2C5FC7B400270AAE /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2392C5FC7B400270AAE /* Int+Extensions.swift */; };
+		277AF23C2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		277AF2372C5FB05D00270AAE /* APIEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIEndpoint.h; sourceTree = "<group>"; };
 		277AF2382C5FB32400270AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		277AF2392C5FC7B400270AAE /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				277AF2172C5F9E7300270AAE /* PresenterState.swift */,
 				277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */,
 				277AF2392C5FC7B400270AAE /* Int+Extensions.swift */,
+				277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				277AF2312C5FAF6300270AAE /* NetworkManaging.m in Sources */,
 				277AF2102C5F9B7A00270AAE /* APIEndpoint.swift in Sources */,
 				277AF1FA2C5F6E9D00270AAE /* CitiesViewModel.swift in Sources */,
+				277AF23C2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift in Sources */,
 				277AF2062C5F867900270AAE /* City.swift in Sources */,
 				277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */,
 				277AF2142C5F9B7A00270AAE /* Network.swift in Sources */,

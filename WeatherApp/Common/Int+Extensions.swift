@@ -11,6 +11,6 @@ extension UUID {
     func generateRandomInt() -> Int {
         let uuidString = self.uuidString
         let uuidHash = uuidString.hash
-        return abs(uuidHash)
+        return abs(uuidHash % 100)
     }
 }

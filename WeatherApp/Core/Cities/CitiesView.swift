@@ -44,20 +44,22 @@ struct CitiesView: View {
     }
     
     private func showAddCityAlert() {
-        let alert = UIAlertController(title: "Add City", message: "Enter city name", preferredStyle: .alert)
-        alert.addTextField()
-        let addAction = UIAlertAction(title: "Add", style: .default) { _ in
-            if let cityName = alert.textFields?.first?.text, !cityName.isEmpty {
+        let alertController = UIAlertController(title: "Add City", message: "Enter city name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "City Name"
+        }
+        let addAction = UIAlertAction.createAddAction(textField: alertController.textFields?.first, viewModel: viewModel) {
+            if let cityName = alertController.textFields?.first?.text, !cityName.isEmpty {
                 viewModel.addCity(name: cityName)
             }
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        alert.addAction(addAction)
-        alert.addAction(cancelAction)
-        
+        let cancelAction = UIAlertAction.createCancelAction()
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+    
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
-            rootViewController.present(alert, animated: true)
+            rootViewController.present(alertController, animated: true)
         }
     }
 }

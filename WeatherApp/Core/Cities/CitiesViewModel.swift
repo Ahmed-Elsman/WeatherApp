@@ -28,14 +28,20 @@ final class CitiesViewModel: ObservableObject, CitiesViewModeling {
     }
 
     func addCity(name: String) {
-        coreDataManager.addCity(name: name)
-        fetchCities()
+        if !isCityAlreadyAdded(name: name) {
+            coreDataManager.addCity(name: name)
+            fetchCities()
+        }
     }
 
     func deleteCity(at index: Int) {
         let city = cities[index]
         coreDataManager.deleteCity(city)
         fetchCities()
+    }
+    
+    func isCityAlreadyAdded(name: String) -> Bool {
+        return cities.contains { $0.name == name }
     }
 }
 
