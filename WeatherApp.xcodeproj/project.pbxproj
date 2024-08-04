@@ -13,6 +13,7 @@
 		277AF1EA2C5F5FC300270AAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277AF1E92C5F5FC300270AAE /* Preview Assets.xcassets */; };
 		277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1EB2C5F5FC300270AAE /* Persistence.swift */; };
 		277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */; };
+		277AF1F82C5F63DB00270AAE /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1F72C5F63DB00270AAE /* CitiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		277AF1E92C5F5FC300270AAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		277AF1EB2C5F5FC300270AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		277AF1EE2C5F5FC300270AAE /* WeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherApp.xcdatamodel; sourceTree = "<group>"; };
+		277AF1F72C5F63DB00270AAE /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */,
 				277AF1E42C5F5FC100270AAE /* ContentView.swift */,
+				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
 				277AF1EB2C5F5FC300270AAE /* Persistence.swift */,
 				277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */,
@@ -71,6 +74,22 @@
 				277AF1E92C5F5FC300270AAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		277AF1F52C5F63BB00270AAE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				277AF1F62C5F63C000270AAE /* Cities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		277AF1F62C5F63C000270AAE /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				277AF1F72C5F63DB00270AAE /* CitiesView.swift */,
+			);
+			path = Cities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277AF1F82C5F63DB00270AAE /* CitiesView.swift in Sources */,
 				277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */,
 				277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */,
 				277AF1E52C5F5FC100270AAE /* ContentView.swift in Sources */,
