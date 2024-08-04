@@ -8,6 +8,7 @@
         <relationship name="coord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoordDAO" inverseName="city" inverseEntity="CoordDAO"/>
         <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HistoryDAO" inverseName="city" inverseEntity="HistoryDAO"/>
         <relationship name="main" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MainDAO" inverseName="city" inverseEntity="MainDAO"/>
+        <relationship name="wind" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WindDAO" inverseName="city" inverseEntity="WindDAO"/>
     </entity>
     <entity name="CoordDAO" representedClassName="CoordDAO" syncable="YES" codeGenerationType="class">
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -22,5 +23,9 @@
         <attribute name="humidity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="temp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CityDAO" inverseName="main" inverseEntity="CityDAO"/>
+    </entity>
+    <entity name="WindDAO" representedClassName="WindDAO" syncable="YES" codeGenerationType="class">
+        <attribute name="speed" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CityDAO" inverseName="wind" inverseEntity="CityDAO"/>
     </entity>
 </model>

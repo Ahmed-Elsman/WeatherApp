@@ -12,6 +12,7 @@ struct City: Codable {
     let coord: Coord?
     let base: String?
     let main: Main?
+    let wind: Wind?
     let visibility: Int
     let id: Int
     let name: String
@@ -30,40 +31,11 @@ struct City: Codable {
             city.main = main.toModel()
             city.main?.city = city
         }
+        if let wind = wind {
+            city.wind = wind.toModel()
+            city.wind?.city = city
+        }
         return city
     }
 }
 
-struct Coord: Codable {
-    let lon: Double
-    let lat: Double
-    
-    func toModel() -> CoordDAO {
-        let coord = CoordDAO(context: CoreDataManager.shared.context)
-        coord.lat = lat
-        coord.lon = lon
-        return coord
-    }
-}
-
-struct Main: Codable {
-    let temp: Double
-    let humidity: Int
-    
-    func toModel() -> MainDAO {
-        let main = MainDAO(context: CoreDataManager.shared.context)
-        main.temp = temp
-        main.humidity = Int32(humidity)
-        return main
-    }
-}
-
-struct History: Codable {
-    let date: String
-    
-    func toModel() -> HistoryDAO {
-        let history = HistoryDAO(context: CoreDataManager.shared.context)
-        history.date = date
-        return history
-    }
-}
