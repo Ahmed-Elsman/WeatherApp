@@ -19,6 +19,9 @@ struct CitiesView: View {
             }) {
                 Image(systemName: "plus")
             })
+            .onAppear {
+                viewModel.fetchCities()
+            }
         }
     }
     

@@ -11,7 +11,6 @@ import Combine
 final class CityDetailViewModel: ObservableObject {
     @Published var city: City?
     @Published var errorMessage: String?
-    
     private let cityRepository: CityRepositoryProtocol
     private let cityName: String
     

@@ -9,12 +9,13 @@ import Foundation
 
 protocol CityListRepositoryProtocol {
     func fetchCities() -> [CityDAO]
-        func addCity(name: String)
-        func deleteCity(_ city: CityDAO)
-        func isCityAlreadyAdded(name: String) -> Bool
+    func addCity(name: String)
+    func deleteCity(_ city: CityDAO)
+    func isCityAlreadyAdded(name: String) -> Bool
 }
 
 final class CityListRepository: CityListRepositoryProtocol {
+     
     private var coreDataManager: CoreDataManaging
 
     init(coreDataManager: CoreDataManaging = CoreDataManager.shared) {

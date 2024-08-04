@@ -13,7 +13,6 @@ final class CitiesViewModel: ObservableObject {
 
     init(cityListRepository: CityListRepositoryProtocol) {
         self.cityListRepository = cityListRepository
-        fetchCities()
     }
 
     func fetchCities() {
