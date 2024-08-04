@@ -8,13 +8,13 @@
 import SwiftUI
 
 @main
-struct WeatherAppApp: App {
+struct CitiesApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CitiesView(viewModel: CitiesViewModel())
+                .environment(\.managedObjectContext, persistenceController.context)
         }
     }
 }

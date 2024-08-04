@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct CitiesView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @StateObject var viewModel: CitiesViewModel
 
-#Preview {
-    CitiesView()
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(Array(viewModel.cities.enumerated()), id: \.element) { index, city in
+                    Text(city.name ?? "")
+                }
+            }
+            .navigationTitle("Cities")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+        }
+    }
 }
