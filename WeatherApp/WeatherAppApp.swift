@@ -13,7 +13,7 @@ struct CitiesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CitiesView(viewModel: CitiesViewModel())
+            CitiesView(viewModel: CitiesViewModel(cityListRepository: CityListRepository()))
                 .environment(\.managedObjectContext, persistenceController.context)
         }
     }

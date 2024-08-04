@@ -7,36 +7,29 @@
 
 import Combine
 
-protocol CitiesViewModeling: ObservableObject {
-    var cities: [CityDAO] { get }
-    func addCity(name: String)
-    func deleteCity(at index: Int)
-    func fetchCities()
-}
-
-final class CitiesViewModel: ObservableObject, CitiesViewModeling {
+final class CitiesViewModel: ObservableObject {
     @Published private(set) var cities: [CityDAO] = []
-    private var coreDataManager: CoreDataManaging
+    private let cityListRepository: CityListRepositoryProtocol
 
-    init(coreDataManager: CoreDataManaging = CoreDataManager.shared) {
-        self.coreDataManager = coreDataManager
+    init(cityListRepository: CityListRepositoryProtocol) {
+        self.cityListRepository = cityListRepository
         fetchCities()
     }
 
     func fetchCities() {
-        cities = coreDataManager.fetchCities()
+        cities = cityListRepository.fetchCities()
     }
 
     func addCity(name: String) {
         if !isCityAlreadyAdded(name: name) {
-            coreDataManager.addCity(name: name)
+            cityListRepository.addCity(name: name)
             fetchCities()
         }
     }
 
     func deleteCity(at index: Int) {
         let city = cities[index]
-        coreDataManager.deleteCity(city)
+        cityListRepository.deleteCity(city)
         fetchCities()
     }
     
@@ -44,5 +37,3 @@ final class CitiesViewModel: ObservableObject, CitiesViewModeling {
         return cities.contains { $0.name == name }
     }
 }
-
-
