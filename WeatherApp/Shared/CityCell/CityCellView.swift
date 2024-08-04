@@ -23,6 +23,3 @@ struct CityCellView: View {
         .padding()
     }
 }
-#Preview {
-    CityCellView(viewModel: CityCellViewModel(city: "Vienna"))
-}

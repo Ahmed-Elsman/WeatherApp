@@ -9,6 +9,8 @@ import CoreData
 
 protocol CoreDataManaging {
     func fetchCities() -> [City]
+    func addCity(name: String)
+    func deleteCity(_ city: City)
 }
 
 class CoreDataManager: CoreDataManaging {
@@ -27,5 +29,20 @@ class CoreDataManager: CoreDataManaging {
         } catch {
             return []
         }
+    }
+
+    func addCity(name: String) {
+        let city = City(context: context)
+        city.name = name
+        saveContext()
+    }
+
+    func deleteCity(_ city: City) {
+        context.delete(city)
+        saveContext()
+    }
+
+    private func saveContext() {
+        PersistenceController.shared.saveContext()
     }
 }
