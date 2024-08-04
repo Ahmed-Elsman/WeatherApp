@@ -5,6 +5,7 @@
 //  Created by Ahmed Elsman on 04/08/2024.
 //
 
+// NetworkManager.m
 #import "NetworkManager.h"
 
 @interface NetworkManager ()
@@ -13,15 +14,15 @@
 
 @implementation NetworkManager
 
-- (instancetype)initWithSession:(id<URLSessionProtocol>)session {
+- (instancetype)initWithSession:(nullable id<URLSessionProtocol>)session {
     self = [super init];
     if (self) {
-        _session = session ? session : [NSURLSession sharedSession];
+        _session = session ?: (id<URLSessionProtocol>)[NSURLSession sharedSession];
     }
     return self;
 }
 
-- (void)fetchDataFrom:(NSURLRequest *)request completion:(void (^)(id _Nullable, NSError * _Nullable))completion {
+- (void)fetchDataFrom:(NSURLRequest *)request completion:(void (^)(NSData * _Nullable, NSError * _Nullable))completion {
     [self.session dataWithRequest:request completion:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             completion(nil, error);
@@ -34,17 +35,7 @@
             completion(nil, responseError);
             return;
         }
-
-        NSError *jsonError = nil;
-        id decodedData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-
-        if (jsonError) {
-            completion(nil, jsonError);
-        } else {
-            completion(decodedData, nil);
-        }
+        completion(data, nil);
     }];
 }
-
 @end
-

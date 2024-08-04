@@ -30,8 +30,8 @@ struct CityDetailView: View {
             }
         }
         .padding()
-        .onAppear {
-            viewModel.fetchCityWeather()
+        .task {
+            await viewModel.fetchCityWeather()
         }
     }
 }

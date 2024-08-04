@@ -12,10 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkManager : NSObject <NetworkManaging>
-
-- (instancetype)initWithSession:(id<URLSessionProtocol>)session;
-
+- (instancetype)initWithSession:(nullable id<URLSessionProtocol>)session;
 @end
 
 NS_ASSUME_NONNULL_END
-

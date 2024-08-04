@@ -14,27 +14,26 @@ final class CityDetailViewModel: ObservableObject {
     
     private let cityRepository: CityRepositoryProtocol
     private let cityName: String
-    private var cancellables = Set<AnyCancellable>()
     
     init(cityName: String, cityRepository: CityRepositoryProtocol = CityRepository()) {
         self.cityName = cityName
         self.cityRepository = cityRepository
-        fetchCityWeather()
+        Task {
+            await fetchCityWeather()
+        }
     }
     
-    func fetchCityWeather() {
-        cityRepository.fetchCityWeather(cityName: cityName)
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                case .finished:
-                    break
-                }
-            } receiveValue: { city in
+    func fetchCityWeather() async {
+        do {
+            let city = try await cityRepository.fetchCityWeather(cityName: cityName)
+            DispatchQueue.main.async {
                 self.city = city
             }
-            .store(in: &cancellables)
+        } catch {
+            DispatchQueue.main.async {
+                self.errorMessage = error.localizedDescription
+            }
+        }
     }
 }
+
