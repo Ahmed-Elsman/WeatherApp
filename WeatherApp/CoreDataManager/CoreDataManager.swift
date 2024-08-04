@@ -8,9 +8,9 @@
 import CoreData
 
 protocol CoreDataManaging {
-    func fetchCities() -> [City]
+    func fetchCities() -> [CityDAO]
     func addCity(name: String)
-    func deleteCity(_ city: City)
+    func deleteCity(_ city: CityDAO)
 }
 
 class CoreDataManager: CoreDataManaging {
@@ -18,12 +18,12 @@ class CoreDataManager: CoreDataManaging {
 
     private init() {}
 
-    private var context: NSManagedObjectContext {
+    var context: NSManagedObjectContext {
         return PersistenceController.shared.context
     }
 
-    func fetchCities() -> [City] {
-        let request: NSFetchRequest<City> = City.fetchRequest()
+    func fetchCities() -> [CityDAO] {
+        let request: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
         do {
             return try context.fetch(request)
         } catch {
@@ -32,12 +32,12 @@ class CoreDataManager: CoreDataManaging {
     }
 
     func addCity(name: String) {
-        let city = City(context: context)
+        let city = CityDAO(context: context)
         city.name = name
         saveContext()
     }
 
-    func deleteCity(_ city: City) {
+    func deleteCity(_ city: CityDAO) {
         context.delete(city)
         saveContext()
     }

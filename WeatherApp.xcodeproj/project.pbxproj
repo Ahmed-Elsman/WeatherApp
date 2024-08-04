@@ -17,6 +17,7 @@
 		277AF1FD2C5F6F0100270AAE /* CityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1FC2C5F6F0100270AAE /* CityCellView.swift */; };
 		277AF2002C5F6F2A00270AAE /* CityCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1FF2C5F6F2A00270AAE /* CityCellViewModel.swift */; };
 		277AF2032C5F708B00270AAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2022C5F708B00270AAE /* CoreDataManager.swift */; };
+		277AF2062C5F867900270AAE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2052C5F867900270AAE /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		277AF1FC2C5F6F0100270AAE /* CityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellView.swift; sourceTree = "<group>"; };
 		277AF1FF2C5F6F2A00270AAE /* CityCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModel.swift; sourceTree = "<group>"; };
 		277AF2022C5F708B00270AAE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		277AF2052C5F867900270AAE /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */,
+				277AF2042C5F866C00270AAE /* Models */,
 				277AF2012C5F706500270AAE /* CoreDataManager */,
 				277AF1FB2C5F6EE600270AAE /* Shared */,
 				277AF1F52C5F63BB00270AAE /* Core */,
@@ -123,6 +126,14 @@
 				277AF2022C5F708B00270AAE /* CoreDataManager.swift */,
 			);
 			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		277AF2042C5F866C00270AAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				277AF2052C5F867900270AAE /* City.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			files = (
 				277AF1F82C5F63DB00270AAE /* CitiesView.swift in Sources */,
 				277AF1FA2C5F6E9D00270AAE /* CitiesViewModel.swift in Sources */,
+				277AF2062C5F867900270AAE /* City.swift in Sources */,
 				277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */,
 				277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */,
 				277AF1FD2C5F6F0100270AAE /* CityCellView.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 class CityCellViewModel: ObservableObject {
     let cityName: String
 
-    init(city: City) {
+    init(city: CityDAO) {
         self.cityName = city.name ?? ""
     }
 }

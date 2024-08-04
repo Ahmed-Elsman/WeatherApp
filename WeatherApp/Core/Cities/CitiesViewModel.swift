@@ -8,14 +8,14 @@
 import Combine
 
 protocol CitiesViewModeling: ObservableObject {
-    var cities: [City] { get }
+    var cities: [CityDAO] { get }
     func addCity(name: String)
     func deleteCity(at index: Int)
     func fetchCities()
 }
 
 class CitiesViewModel: ObservableObject, CitiesViewModeling {
-    @Published private(set) var cities: [City] = []
+    @Published private(set) var cities: [CityDAO] = []
     private var coreDataManager: CoreDataManaging
 
     init(coreDataManager: CoreDataManaging = CoreDataManager.shared) {
