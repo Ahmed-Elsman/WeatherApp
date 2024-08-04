@@ -34,6 +34,7 @@ class CoreDataManager: CoreDataManaging {
     func addCity(name: String) {
         let city = CityDAO(context: context)
         city.name = name
+        city.id = Int32(UUID().generateRandomInt())
         saveContext()
     }
 

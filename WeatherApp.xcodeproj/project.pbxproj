@@ -35,6 +35,7 @@
 		277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF22E2C5FAF3C00270AAE /* URLSessionProtocol.m */; };
 		277AF2312C5FAF6300270AAE /* NetworkManaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2302C5FAF6300270AAE /* NetworkManaging.m */; };
 		277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2322C5FAF8100270AAE /* APIEndpoint.m */; };
+		277AF23A2C5FC7B400270AAE /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2392C5FC7B400270AAE /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		277AF2362C5FB03800270AAE /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		277AF2372C5FB05D00270AAE /* APIEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIEndpoint.h; sourceTree = "<group>"; };
 		277AF2382C5FB32400270AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		277AF2392C5FC7B400270AAE /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				277AF2152C5F9E7300270AAE /* APIError.swift */,
 				277AF2172C5F9E7300270AAE /* PresenterState.swift */,
 				277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */,
+				277AF2392C5FC7B400270AAE /* Int+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */,
 				277AF21B2C5F9E7300270AAE /* APIError.swift in Sources */,
 				277AF1FD2C5F6F0100270AAE /* CityCellView.swift in Sources */,
+				277AF23A2C5FC7B400270AAE /* Int+Extensions.swift in Sources */,
 				277AF2232C5FA23100270AAE /* CityRepository.swift in Sources */,
 				277AF2122C5F9B7A00270AAE /* CityWeatherDetailsEndpoint.swift in Sources */,
 				277AF2272C5FA62900270AAE /* Main.swift in Sources */,
