@@ -32,6 +32,9 @@
 		277AF2272C5FA62900270AAE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2262C5FA62900270AAE /* Main.swift */; };
 		277AF2292C5FA63500270AAE /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2282C5FA63500270AAE /* Wind.swift */; };
 		277AF22B2C5FA64000270AAE /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF22A2C5FA64000270AAE /* Coord.swift */; };
+		277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF22E2C5FAF3C00270AAE /* URLSessionProtocol.m */; };
+		277AF2312C5FAF6300270AAE /* NetworkManaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2302C5FAF6300270AAE /* NetworkManaging.m */; };
+		277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2322C5FAF8100270AAE /* APIEndpoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,15 @@
 		277AF2262C5FA62900270AAE /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		277AF2282C5FA63500270AAE /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		277AF22A2C5FA64000270AAE /* Coord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		277AF22C2C5FAE5000270AAE /* WeatherApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		277AF22E2C5FAF3C00270AAE /* URLSessionProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSessionProtocol.m; sourceTree = "<group>"; };
+		277AF2302C5FAF6300270AAE /* NetworkManaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManaging.m; sourceTree = "<group>"; };
+		277AF2322C5FAF8100270AAE /* APIEndpoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIEndpoint.m; sourceTree = "<group>"; };
+		277AF2342C5FAFD100270AAE /* URLSessionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSessionProtocol.h; sourceTree = "<group>"; };
+		277AF2352C5FAFFC00270AAE /* NetworkManaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManaging.h; sourceTree = "<group>"; };
+		277AF2362C5FB03800270AAE /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		277AF2372C5FB05D00270AAE /* APIEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIEndpoint.h; sourceTree = "<group>"; };
+		277AF2382C5FB32400270AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		277AF1D62C5F5FC100270AAE = {
 			isa = PBXGroup;
 			children = (
+				277AF22C2C5FAE5000270AAE /* WeatherApp-Bridging-Header.h */,
 				277AF1E12C5F5FC100270AAE /* WeatherApp */,
 				277AF1E02C5F5FC100270AAE /* Products */,
 			);
@@ -93,6 +106,7 @@
 		277AF1E12C5F5FC100270AAE /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				277AF2382C5FB32400270AAE /* Info.plist */,
 				277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */,
 				277AF21A2C5F9E7300270AAE /* Common */,
 				277AF20F2C5F9B7A00270AAE /* DAL */,
@@ -188,6 +202,7 @@
 				277AF20C2C5F9B7A00270AAE /* CityWeatherDetailsEndpoint.swift */,
 				277AF20D2C5F9B7A00270AAE /* ConfigurationManager.swift */,
 				277AF20E2C5F9B7A00270AAE /* Network.swift */,
+				277AF22D2C5FAED200270AAE /* NetworkLayerObjc */,
 			);
 			path = DAL;
 			sourceTree = "<group>";
@@ -200,6 +215,20 @@
 				277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		277AF22D2C5FAED200270AAE /* NetworkLayerObjc */ = {
+			isa = PBXGroup;
+			children = (
+				277AF2342C5FAFD100270AAE /* URLSessionProtocol.h */,
+				277AF22E2C5FAF3C00270AAE /* URLSessionProtocol.m */,
+				277AF2362C5FB03800270AAE /* NetworkManager.h */,
+				277AF2352C5FAFFC00270AAE /* NetworkManaging.h */,
+				277AF2302C5FAF6300270AAE /* NetworkManaging.m */,
+				277AF2372C5FB05D00270AAE /* APIEndpoint.h */,
+				277AF2322C5FAF8100270AAE /* APIEndpoint.m */,
+			);
+			path = NetworkLayerObjc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277AF1F82C5F63DB00270AAE /* CitiesView.swift in Sources */,
+				277AF2312C5FAF6300270AAE /* NetworkManaging.m in Sources */,
 				277AF2102C5F9B7A00270AAE /* APIEndpoint.swift in Sources */,
 				277AF1FA2C5F6E9D00270AAE /* CitiesViewModel.swift in Sources */,
 				277AF2062C5F867900270AAE /* City.swift in Sources */,
@@ -280,6 +310,7 @@
 				277AF2142C5F9B7A00270AAE /* Network.swift in Sources */,
 				277AF2092C5F9A1D00270AAE /* CityDetailView.swift in Sources */,
 				277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */,
+				277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */,
 				277AF21B2C5F9E7300270AAE /* APIError.swift in Sources */,
 				277AF1FD2C5F6F0100270AAE /* CityCellView.swift in Sources */,
 				277AF2232C5FA23100270AAE /* CityRepository.swift in Sources */,
@@ -288,6 +319,7 @@
 				277AF21D2C5F9E7300270AAE /* PresenterState.swift in Sources */,
 				277AF2212C5FA1F200270AAE /* CityDetailViewModel.swift in Sources */,
 				277AF2292C5FA63500270AAE /* Wind.swift in Sources */,
+				277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */,
 				277AF2252C5FA61E00270AAE /* History.swift in Sources */,
 				277AF2132C5F9B7A00270AAE /* ConfigurationManager.swift in Sources */,
 				277AF22B2C5FA64000270AAE /* Coord.swift in Sources */,
@@ -431,6 +463,7 @@
 				DEVELOPMENT_TEAM = VU797BVF5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WeatherApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -450,6 +483,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -466,6 +500,7 @@
 				DEVELOPMENT_TEAM = VU797BVF5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WeatherApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -485,6 +520,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
