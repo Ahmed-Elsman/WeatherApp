@@ -15,6 +15,13 @@ struct CitiesView: View {
             List {
                 ForEach(Array(viewModel.cities.enumerated()), id: \.element) { index, city in
                     CityCellView(viewModel: CityCellViewModel(city: city))
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                viewModel.deleteCity(at: index)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                 }
             }
             .navigationTitle("Cities")
