@@ -14,13 +14,14 @@ struct CitiesView: View {
         NavigationView {
             List {
                 ForEach(Array(viewModel.cities.enumerated()), id: \.element) { index, city in
-                    Text(city.name ?? "")
+                    CityCellView(viewModel: CityCellViewModel(city: city))
                 }
             }
             .navigationTitle("Cities")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
+                        
                     }) {
                         Image(systemName: "plus")
                     }
