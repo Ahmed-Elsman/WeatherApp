@@ -12,7 +12,7 @@ protocol CityRepositoryProtocol {
     func fetchCityWeather(cityName: String) async throws -> City
 }
 
-final class CityRepository: CityRepositoryProtocol {
+final class CityDetailsRepository: CityRepositoryProtocol {
     private let networkManager: NetworkManaging
     
     init(networkManager: NetworkManaging = NetworkManager(session: nil)) {

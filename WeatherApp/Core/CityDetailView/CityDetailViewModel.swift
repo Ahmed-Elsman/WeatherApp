@@ -15,7 +15,7 @@ final class CityDetailViewModel: ObservableObject {
     private let cityRepository: CityRepositoryProtocol
     private let cityName: String
     
-    init(cityName: String, cityRepository: CityRepositoryProtocol = CityRepository()) {
+    init(cityName: String, cityRepository: CityRepositoryProtocol = CityDetailsRepository()) {
         self.cityName = cityName
         self.cityRepository = cityRepository
         Task {
