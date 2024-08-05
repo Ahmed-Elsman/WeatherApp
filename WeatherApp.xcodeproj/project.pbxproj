@@ -134,7 +134,6 @@
 				277AF1FB2C5F6EE600270AAE /* Components */,
 				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
-				277AF1EB2C5F5FC300270AAE /* Persistence.swift */,
 				277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */,
 				277AF1E82C5F5FC300270AAE /* Preview Content */,
 			);
@@ -223,6 +222,7 @@
 		277AF20F2C5F9B7A00270AAE /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				277AF1EB2C5F5FC300270AAE /* Persistence.swift */,
 				277AF20A2C5F9B7A00270AAE /* APIEndpoint.swift */,
 				277AF20C2C5F9B7A00270AAE /* CityWeatherDetailsEndpoint.swift */,
 				277AF20D2C5F9B7A00270AAE /* ConfigurationManager.swift */,

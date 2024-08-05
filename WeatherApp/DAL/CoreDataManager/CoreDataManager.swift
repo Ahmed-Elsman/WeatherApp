@@ -68,24 +68,20 @@ class CoreDataManager: CoreDataManaging {
                 
                 // Append weather of updatedCity to existingCity weather
                 if let weather = updatedCity.weather?.first {
-//                    for weather in updatedWeather {
-                        let weatherCopy = WeatherDAO(context: context)
-                        weatherCopy.id = Int32(weather.id)
-                        weatherCopy.main = weather.main
-                        weatherCopy.descriptions = weather.description
-                        weatherCopy.icon = weather.icon
-                        weatherCopy.city = existingCity
-                        weatherCopy.dateTime = weather.dateTime ?? Date()
-                        existingCity.addToWeather(weatherCopy)
-//                    }
+                    let weatherCopy = WeatherDAO(context: context)
+                    weatherCopy.id = Int32(weather.id)
+                    weatherCopy.main = weather.main
+                    weatherCopy.descriptions = weather.description
+                    weatherCopy.icon = weather.icon
+                    weatherCopy.city = existingCity
+                    weatherCopy.dateTime = weather.dateTime ?? Date()
+                    existingCity.addToWeather(weatherCopy)
                 }
                 saveContext()
             } else {
-                // TODO: Show an alert if there is an error when fetching or updating data
                 print("City not found")
             }
         } catch {
-            // TODO: Show an alert if there is an error when fetching or updating data
             print("Failed to fetch city for updating: \(error)")
         }
     }

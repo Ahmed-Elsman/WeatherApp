@@ -19,7 +19,7 @@ struct PersistenceController {
         }
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
-                print("Unresolved error ")
+                print("Unresolved error \(error.description)")
             }
         }
     }
@@ -35,7 +35,7 @@ struct PersistenceController {
                 try context.save()
             } catch {
                 let nserror = error as NSError
-                print("Unresolved error")
+                print("Unresolved error \(nserror.description)")
             }
         }
     }
