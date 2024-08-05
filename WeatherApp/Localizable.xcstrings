@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%.2f m/s" : {
+
+    },
+    "%.2f°C" : {
+
+    },
+    "%lld%%" : {
+
+    },
+    "Cities" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Done" : {
+
+    },
+    "Humidity:" : {
+
+    },
+    "Loading..." : {
+
+    },
+    "Temperature:" : {
+
+    },
+    "Wind Speed:" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -46,6 +46,7 @@
 		27D318EE2C610B5700734420 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318ED2C610B5700734420 /* LoadingView.swift */; };
 		27D318F02C610E8900734420 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318EF2C610E8900734420 /* NoDataView.swift */; };
 		27D318F92C611E2800734420 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D318F82C611E2800734420 /* Launch Screen.storyboard */; };
+		27D318FD2C61291700734420 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 27D318FC2C61291700734420 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		27D318ED2C610B5700734420 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		27D318EF2C610E8900734420 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		27D318F82C611E2800734420 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		27D318FC2C61291700734420 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7D5076FBF90A63DC4B73DD3A /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
 				27D318F82C611E2800734420 /* Launch Screen.storyboard */,
+				27D318FC2C61291700734420 /* Localizable.xcstrings */,
 				277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */,
 				277AF1E82C5F5FC300270AAE /* Preview Content */,
 			);
@@ -354,6 +357,7 @@
 			files = (
 				27D318F92C611E2800734420 /* Launch Screen.storyboard in Resources */,
 				277AF1EA2C5F5FC300270AAE /* Preview Assets.xcassets in Resources */,
+				27D318FD2C61291700734420 /* Localizable.xcstrings in Resources */,
 				277AF1E72C5F5FC300270AAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
