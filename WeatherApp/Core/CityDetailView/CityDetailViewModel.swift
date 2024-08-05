@@ -17,9 +17,6 @@ final class CityDetailViewModel: ObservableObject {
     init(cityName: String, cityRepository: CityRepositoryProtocol = CityDetailsRepository()) {
         self.cityName = cityName
         self.cityRepository = cityRepository
-        Task {
-            await fetchCityWeather()
-        }
     }
     
     func fetchCityWeather() async {

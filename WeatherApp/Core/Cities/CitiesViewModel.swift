@@ -16,6 +16,7 @@ final class CitiesViewModel: ObservableObject {
     }
 
     func fetchCities() {
+        cities.removeAll()
         cities = cityListRepository.fetchCities()
     }
 

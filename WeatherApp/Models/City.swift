@@ -39,3 +39,12 @@ struct City: Codable {
     }
 }
 
+extension City: Hashable {
+    static func == (lhs: City, rhs: City) -> Bool {
+        lhs.name == rhs.name
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+}

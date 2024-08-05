@@ -41,16 +41,29 @@ class CoreDataManager: CoreDataManaging {
     
     func updateCity(with updatedCity: CityDAO) {
         let fetchRequest: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name ==[cd] %@", updatedCity.name ?? "")
-        
+        fetchRequest.fetchLimit = 1
+        fetchRequest.predicate = NSPredicate(format: "id == %d", updatedCity.id)
+
         do {
             let results = try context.fetch(fetchRequest)
             if let existingCity = results.first {
+                // Update the existing city's properties
                 existingCity.name = updatedCity.name
+                
+                // Fetch the old city to delete if necessary
+                let oldFetchRequest: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
+                oldFetchRequest.predicate = NSPredicate(format: "id != %d AND name == %@", updatedCity.id, updatedCity.name ?? "")
+                let oldResults = try context.fetch(oldFetchRequest)
+                for oldCity in oldResults {
+                    context.delete(oldCity)
+                }
+                
                 saveContext()
+            } else {
+                print("City not found")
             }
         } catch {
-            // TODO: need to show an alert if there exist an error happens when updating data
+            // TODO: Show an alert if there is an error when fetching or updating data
             print("Failed to fetch city for updating: \(error)")
         }
     }

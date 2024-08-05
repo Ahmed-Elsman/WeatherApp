@@ -27,7 +27,7 @@ struct CitiesView: View {
     
     private func citiesList() -> some View {
         List {
-            ForEach(Array(viewModel.cities.enumerated()), id: \.element.id) { index, city in
+            ForEach(Array(viewModel.cities.enumerated()), id: \.element.name) { index, city in
                 NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: city.name ?? ""))) {
                     cityCell(index, city)
                 }
@@ -52,9 +52,7 @@ struct CitiesView: View {
             textField.placeholder = "City Name"
         }
         let addAction = UIAlertAction.createAddAction(textField: alertController.textFields?.first, viewModel: viewModel) {
-            if let cityName = alertController.textFields?.first?.text, !cityName.isEmpty {
-                viewModel.addCity(name: cityName)
-            }
+            viewModel.fetchCities()
         }
         let cancelAction = UIAlertAction.createCancelAction()
         alertController.addAction(addAction)
