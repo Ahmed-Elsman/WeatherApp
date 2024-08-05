@@ -22,6 +22,8 @@ struct CityDetailView: View {
                     
                     weatherDetailsSection(city)
                         .padding(.top, UIConstants.containerViewPadding)
+                } else {
+                    LoadingView()
                 }
             }
             .padding()

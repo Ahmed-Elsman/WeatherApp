@@ -43,6 +43,7 @@
 		277AF24B2C60CDC100270AAE /* WeatherHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24A2C60CDC100270AAE /* WeatherHistoryViewModel.swift */; };
 		277AF24D2C60E47C00270AAE /* WeatherHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24C2C60E47C00270AAE /* WeatherHistoryCell.swift */; };
 		277AF24F2C60E53500270AAE /* WeatherHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */; };
+		27D318EE2C610B5700734420 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318ED2C610B5700734420 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		277AF24A2C60CDC100270AAE /* WeatherHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryViewModel.swift; sourceTree = "<group>"; };
 		277AF24C2C60E47C00270AAE /* WeatherHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryCell.swift; sourceTree = "<group>"; };
 		277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryCellViewModel.swift; sourceTree = "<group>"; };
+		27D318ED2C610B5700734420 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				277AF2452C60C72100270AAE /* ImageLoaderView.swift */,
+				27D318ED2C610B5700734420 /* LoadingView.swift */,
 				277AF1FE2C5F6F1900270AAE /* CityCell */,
 				277AF2502C60E56400270AAE /* WeatherHistoryCell */,
 			);
@@ -374,6 +377,7 @@
 				277AF22B2C5FA64000270AAE /* Coord.swift in Sources */,
 				277AF1E32C5F5FC100270AAE /* WeatherAppApp.swift in Sources */,
 				277AF2032C5F708B00270AAE /* CoreDataManager.swift in Sources */,
+				27D318EE2C610B5700734420 /* LoadingView.swift in Sources */,
 				277AF2002C5F6F2A00270AAE /* CityCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
