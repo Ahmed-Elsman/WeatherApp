@@ -17,4 +17,8 @@ struct Main: Codable {
         main.humidity = Int32(humidity)
         return main
     }
+    
+    var tempCelsius: Double {
+        return temp - 273.15
+    }
 }
