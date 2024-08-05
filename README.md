@@ -10,7 +10,7 @@ The Weather App is an iOS application developed using SwiftUI and the MVVM (Mode
 - View detailed weather information, including temperature, humidity, and wind speed.
 - Displays a historical log of weather data for added cities.
 - Handles network connectivity changes gracefully.
-- Uses modern Swift features including async/await for network calls which cames from backend using objective c 'Network Layer'
+- Uses modern Swift features including async/await for network calls that come from the backend using objective c 'Network Layer'
 
 ## Architecture
 
@@ -106,7 +106,7 @@ The project includes unit tests to ensure the functionality of view models and n
 - Make view models using ViewModelStates (Loading, Loaded, Error).
 - Enhance UI to fit UI_Specs.
 - More Unit test cases.
-- Use SnapshotTests.
+- More SnapshotTests.
 - SwiftLint.
   
 ## Acknowledgements
