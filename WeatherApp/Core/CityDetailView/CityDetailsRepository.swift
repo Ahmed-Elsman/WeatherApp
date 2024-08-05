@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 protocol CityRepositoryProtocol {
     func fetchCityWeather(cityName: String) async throws -> City
@@ -26,8 +25,6 @@ final class CityDetailsRepository: CityRepositoryProtocol {
         let endpoint = CityWeatherDetailsEndpoint(cityName: cityName)
         let data: Data = try await networkManager.fetchData(from: endpoint.request)
         let cityResponse: City = try JSONDecoder().decode(City.self, from: data)
-        
-//        let updatedCity = cityResponse.toModel()
         coreDataManager.updateCity(with: cityResponse)
         return cityResponse
     }

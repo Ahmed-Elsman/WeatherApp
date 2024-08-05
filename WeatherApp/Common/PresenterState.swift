@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum PresenterState<T> {
+public enum ViewModelState<T> {
     case loading
     case loaded(data: T)
     case error(error: APIError)
