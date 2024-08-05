@@ -12,6 +12,7 @@ struct Weather: Codable {
     let main: String
     let description: String
     let icon: String
+    let dateTime: Date?
     
     func toModel() -> WeatherDAO {
         let weather = WeatherDAO(context: CoreDataManager.shared.context)
@@ -19,6 +20,7 @@ struct Weather: Codable {
         weather.main = main
         weather.descriptions = description
         weather.icon = icon
+        weather.dateTime = dateTime
         return weather
     }
 }

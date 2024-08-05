@@ -75,6 +75,7 @@ class CoreDataManager: CoreDataManaging {
                         weatherCopy.descriptions = weather.description
                         weatherCopy.icon = weather.icon
                         weatherCopy.city = existingCity
+                        weatherCopy.dateTime = Date()
                         existingCity.addToWeather(weatherCopy)
                     }
                 }

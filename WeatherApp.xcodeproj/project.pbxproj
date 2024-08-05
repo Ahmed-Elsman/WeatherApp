@@ -38,6 +38,7 @@
 		277AF23C2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */; };
 		277AF23E2C5FCDDC00270AAE /* CityListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */; };
 		277AF2402C60A94400270AAE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23F2C60A94400270AAE /* Weather.swift */; };
+		277AF2422C60BF4600270AAE /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2412C60BF4600270AAE /* Date+Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction + Extensions.swift"; sourceTree = "<group>"; };
 		277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListRepository.swift; sourceTree = "<group>"; };
 		277AF23F2C60A94400270AAE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		277AF2412C60BF4600270AAE /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */,
 				277AF2392C5FC7B400270AAE /* Int+Extensions.swift */,
 				277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */,
+				277AF2412C60BF4600270AAE /* Date+Extenstions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */,
 				277AF2252C5FA61E00270AAE /* History.swift in Sources */,
 				277AF2132C5F9B7A00270AAE /* ConfigurationManager.swift in Sources */,
+				277AF2422C60BF4600270AAE /* Date+Extenstions.swift in Sources */,
 				277AF22B2C5FA64000270AAE /* Coord.swift in Sources */,
 				277AF21E2C5F9E7300270AAE /* ProgressViewManager.swift in Sources */,
 				277AF1E32C5F5FC100270AAE /* WeatherAppApp.swift in Sources */,
