@@ -8,9 +8,14 @@
 import Foundation
 
 class CityCellViewModel: ObservableObject {
-    let cityName: String
+    @Published var city: CityDAO
+    @Published var showingWeatherHistory = false
 
+    var cityName: String {
+        return city.name ?? ""
+    }
+    
     init(city: CityDAO) {
-        self.cityName = city.name ?? ""
+        self.city = city
     }
 }

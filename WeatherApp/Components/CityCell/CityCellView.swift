@@ -15,9 +15,12 @@ struct CityCellView: View {
             Text(viewModel.cityName)
             Spacer()
             Button(action: {
-                // Action for info button
+                viewModel.showingWeatherHistory.toggle()
             }) {
                 Image(systemName: "info.circle")
+            }
+            .sheet(isPresented: $viewModel.showingWeatherHistory) {
+                WeatherHistoryView(viewModel: WeatherHistoryViewModel(city: viewModel.city))
             }
         }
         .padding()
