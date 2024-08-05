@@ -24,10 +24,8 @@
 		277AF2132C5F9B7A00270AAE /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF20D2C5F9B7A00270AAE /* ConfigurationManager.swift */; };
 		277AF21B2C5F9E7300270AAE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2152C5F9E7300270AAE /* APIError.swift */; };
 		277AF21D2C5F9E7300270AAE /* PresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2172C5F9E7300270AAE /* PresenterState.swift */; };
-		277AF21E2C5F9E7300270AAE /* ProgressViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */; };
 		277AF2212C5FA1F200270AAE /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2202C5FA1F200270AAE /* CityDetailViewModel.swift */; };
 		277AF2232C5FA23100270AAE /* CityDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2222C5FA23100270AAE /* CityDetailsRepository.swift */; };
-		277AF2252C5FA61E00270AAE /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2242C5FA61E00270AAE /* History.swift */; };
 		277AF2272C5FA62900270AAE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2262C5FA62900270AAE /* Main.swift */; };
 		277AF2292C5FA63500270AAE /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2282C5FA63500270AAE /* Wind.swift */; };
 		277AF22B2C5FA64000270AAE /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF22A2C5FA64000270AAE /* Coord.swift */; };
@@ -66,10 +64,8 @@
 		277AF20D2C5F9B7A00270AAE /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		277AF2152C5F9E7300270AAE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		277AF2172C5F9E7300270AAE /* PresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterState.swift; sourceTree = "<group>"; };
-		277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewManager.swift; sourceTree = "<group>"; };
 		277AF2202C5FA1F200270AAE /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		277AF2222C5FA23100270AAE /* CityDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsRepository.swift; sourceTree = "<group>"; };
-		277AF2242C5FA61E00270AAE /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		277AF2262C5FA62900270AAE /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		277AF2282C5FA63500270AAE /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		277AF22A2C5FA64000270AAE /* Coord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
@@ -203,7 +199,6 @@
 				277AF22A2C5FA64000270AAE /* Coord.swift */,
 				277AF2282C5FA63500270AAE /* Wind.swift */,
 				277AF2262C5FA62900270AAE /* Main.swift */,
-				277AF2242C5FA61E00270AAE /* History.swift */,
 				277AF23F2C60A94400270AAE /* Weather.swift */,
 			);
 			path = Models;
@@ -236,7 +231,6 @@
 			children = (
 				277AF2152C5F9E7300270AAE /* APIError.swift */,
 				277AF2172C5F9E7300270AAE /* PresenterState.swift */,
-				277AF2182C5F9E7300270AAE /* ProgressViewManager.swift */,
 				277AF2392C5FC7B400270AAE /* Int+Extensions.swift */,
 				277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */,
 				277AF2412C60BF4600270AAE /* Date+Extenstions.swift */,
@@ -375,11 +369,9 @@
 				277AF2212C5FA1F200270AAE /* CityDetailViewModel.swift in Sources */,
 				277AF2292C5FA63500270AAE /* Wind.swift in Sources */,
 				277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */,
-				277AF2252C5FA61E00270AAE /* History.swift in Sources */,
 				277AF2132C5F9B7A00270AAE /* ConfigurationManager.swift in Sources */,
 				277AF2422C60BF4600270AAE /* Date+Extenstions.swift in Sources */,
 				277AF22B2C5FA64000270AAE /* Coord.swift in Sources */,
-				277AF21E2C5F9E7300270AAE /* ProgressViewManager.swift in Sources */,
 				277AF1E32C5F5FC100270AAE /* WeatherAppApp.swift in Sources */,
 				277AF2032C5F708B00270AAE /* CoreDataManager.swift in Sources */,
 				277AF2002C5F6F2A00270AAE /* CityCellViewModel.swift in Sources */,
