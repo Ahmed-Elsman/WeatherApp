@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIAlertAction {
-    
+
     static func createAddAction(textField: UITextField?, viewModel: CitiesViewModel, completion: @escaping () -> Void) -> UIAlertAction {
         return UIAlertAction(title: "Add", style: .default) { _ in
             if let name = textField?.text?.capitalized, !name.isEmpty {
@@ -25,7 +25,7 @@ extension UIAlertAction {
             }
         }
     }
-    
+
     private static func getRootViewController() -> UIViewController? {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
@@ -33,7 +33,7 @@ extension UIAlertAction {
         }
         return nil
     }
-    
+
     static func createCancelAction() -> UIAlertAction {
         return UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct NoDataView: View {
     var iconName: String
     var message: String
-    
+
     var body: some View {
         VStack {
             Image(systemName: iconName)

@@ -9,7 +9,7 @@ import Foundation
 
 struct Wind: Codable {
     let speed: Double
-    
+
     func toModel() -> WindDAO {
         let wind = WindDAO(context: CoreDataManager.shared.context)
         wind.speed = speed

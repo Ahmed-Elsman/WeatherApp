@@ -14,7 +14,7 @@ class CityCellViewModel: ObservableObject {
     var cityName: String {
         return city.name ?? ""
     }
-    
+
     init(city: CityDAO) {
         self.city = city
     }

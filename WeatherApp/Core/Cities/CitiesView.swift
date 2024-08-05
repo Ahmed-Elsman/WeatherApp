@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CitiesView: View {
     @StateObject var viewModel: CitiesViewModel
-    
+
     var body: some View {
-        
+
         NavigationView {
-            VStack{
+            VStack {
                 if viewModel.cities.isEmpty {
                     NoDataView(iconName: "exclamationmark.triangle",
                                message: "No Cities are added, Add new city please")
@@ -32,7 +32,7 @@ struct CitiesView: View {
             }
         }
     }
-    
+
     private func citiesList() -> some View {
         List {
             ForEach(Array(viewModel.cities.enumerated()), id: \.element.name) { index, city in
@@ -42,7 +42,7 @@ struct CitiesView: View {
             }
         }
     }
-    
+
     private func cityCell(_ index: Int, _ city: CityDAO) -> some View {
         CityCellView(viewModel: CityCellViewModel(city: city))
             .swipeActions {
@@ -53,7 +53,7 @@ struct CitiesView: View {
                 }
             }
     }
-    
+
     private func showAddCityAlert() {
         let alertController = UIAlertController(title: "Add City", message: "Enter city name", preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -65,7 +65,7 @@ struct CitiesView: View {
         let cancelAction = UIAlertAction.createCancelAction()
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
-    
+
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
             rootViewController.present(alertController, animated: true)

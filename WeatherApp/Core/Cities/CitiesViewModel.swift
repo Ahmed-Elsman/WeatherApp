@@ -32,7 +32,7 @@ final class CitiesViewModel: ObservableObject {
         cityListRepository.deleteCity(city)
         fetchCities()
     }
-    
+
     func isCityAlreadyAdded(name: String) -> Bool {
         return cities.contains { $0.name == name }
     }

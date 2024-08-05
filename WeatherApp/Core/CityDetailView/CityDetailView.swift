@@ -9,17 +9,17 @@ import SwiftUI
 
 struct CityDetailView: View {
     @ObservedObject var viewModel: CityDetailViewModel
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: UIConstants.containerViewPadding) {
                 if let city = viewModel.city {
-                    if let weather = city.weather?.first(where: {$0.dateTime == viewModel.weather?.dateTime}){
+                    if let weather = city.weather?.first(where: {$0.dateTime == viewModel.weather?.dateTime}) {
                         weatherSection(weather)
                     }
-                    
+
                     Divider()
-                    
+
                     weatherDetailsSection(city)
                         .padding(.top, UIConstants.containerViewPadding)
                 } else {
@@ -33,26 +33,26 @@ struct CityDetailView: View {
             await viewModel.fetchCityWeather()
         }
     }
-    
+
     private func weatherDetailsSection(_ city: City) -> some View {
         VStack(alignment: .leading, spacing: UIConstants.containerViewSpacing) {
-            
+
             temperatureSection(city)
-            
+
             humiditySection(city)
-            
+
             if let wind = city.wind {
                 windSection(wind)
             }
         }
     }
-    
+
     private func weatherSection(_ weather: Weather) -> some View {
         VStack(alignment: .leading, spacing: UIConstants.containerViewSpacing) {
             Text((weather.dateTime ?? Date()).dateTimeString())
                 .font(.caption)
                 .foregroundColor(.secondary)
-            
+
             if let iconUrl = weather.weatherIconURL {
                 ImageLoaderView(
                     imageURL: iconUrl,
@@ -60,15 +60,15 @@ struct CityDetailView: View {
                 )
                 .frame(width: 60, height: 60)
             }
-            
+
             Text(weather.description)
                 .font(.title)
                 .fontWeight(.medium)
                 .foregroundColor(.primary)
         }
-        
+
     }
-    
+
     private func temperatureSection(_ city: City) -> some View {
         HStack {
             Text("Temperature:")
@@ -80,7 +80,7 @@ struct CityDetailView: View {
                 .foregroundColor(.primary)
         }
     }
-    
+
     private func humiditySection(_ city: City) -> some View {
         HStack {
             Text("Humidity:")
@@ -92,7 +92,7 @@ struct CityDetailView: View {
                 .foregroundColor(.primary)
         }
     }
-    
+
     private func windSection(_ wind: Wind) -> some View {
         HStack {
             Text("Wind Speed:")

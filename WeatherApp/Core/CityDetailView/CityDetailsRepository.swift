@@ -14,13 +14,13 @@ protocol CityRepositoryProtocol {
 final class CityDetailsRepository: CityRepositoryProtocol {
     private let networkManager: NetworkManaging
     private let coreDataManager: CoreDataManaging
-    
+
     init(networkManager: NetworkManaging = NetworkManager(session: nil),
          coreDataManager: CoreDataManaging = CoreDataManager.shared) {
         self.networkManager = networkManager
         self.coreDataManager = coreDataManager
     }
-    
+
     func fetchCityWeather(cityName: String) async throws -> City {
         let endpoint = CityWeatherDetailsEndpoint(cityName: cityName)
         let data: Data = try await networkManager.fetchData(from: endpoint.request)

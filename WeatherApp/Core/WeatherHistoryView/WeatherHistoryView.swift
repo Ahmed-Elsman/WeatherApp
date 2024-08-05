@@ -10,7 +10,7 @@ import SwiftUI
 struct WeatherHistoryView: View {
     @ObservedObject var viewModel: WeatherHistoryViewModel
     @Binding var isPresented: Bool
-    
+
     var body: some View {
         NavigationView {
             VStack {

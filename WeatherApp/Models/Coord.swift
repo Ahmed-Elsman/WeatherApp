@@ -10,7 +10,7 @@ import Foundation
 struct Coord: Codable {
     let lon: Double
     let lat: Double
-    
+
     func toModel() -> CoordDAO {
         let coord = CoordDAO(context: CoreDataManager.shared.context)
         coord.lat = lat

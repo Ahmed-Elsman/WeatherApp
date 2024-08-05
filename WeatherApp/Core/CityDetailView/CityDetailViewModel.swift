@@ -14,13 +14,13 @@ final class CityDetailViewModel: ObservableObject {
     @Published var errorMessage: String?
     private let cityRepository: CityRepositoryProtocol
     private let cityName: String
-    
+
     init(cityName: String, weather: WeatherDAO? = nil, cityRepository: CityRepositoryProtocol = CityDetailsRepository()) {
         self.cityName = cityName
         self.cityRepository = cityRepository
         self.weather = weather
     }
-    
+
     func fetchCityWeather() async {
         if weather?.city != nil {
             DispatchQueue.main.async { [weak self] in

@@ -13,7 +13,7 @@ struct Weather: Codable {
     let description: String
     let icon: String
     let dateTime: Date?
-    
+
     func toModel() -> WeatherDAO {
         let weather = WeatherDAO(context: CoreDataManager.shared.context)
         weather.id = Int32(id)
@@ -23,7 +23,7 @@ struct Weather: Codable {
         weather.dateTime = dateTime
         return weather
     }
-    
+
     var weatherIconURL: URL? {
         return URL(string: "\(ConfigurationManager.shared.baseImageURL)\(icon).png")
     }

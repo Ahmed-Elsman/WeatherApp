@@ -17,7 +17,7 @@ struct City: Codable {
     let id: Int
     let name: String
     let weather: [Weather]?
-    
+
     func toModel() -> CityDAO {
         let city = CityDAO(context: CoreDataManager.shared.context)
         city.id = Int32(id)
@@ -36,7 +36,7 @@ struct City: Codable {
             city.wind = wind.toModel()
             city.wind?.city = city
         }
-        
+
         if let weatherArray = weather {
             for weather in weatherArray {
                 let weatherDAO = weather.toModel()

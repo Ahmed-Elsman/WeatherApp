@@ -11,7 +11,7 @@ public enum APIError: Error {
     case invalidResponse
     case decodingError
     case noData
-    
+
     var localizedDescription: String {
         switch self {
         case .invalidResponse:

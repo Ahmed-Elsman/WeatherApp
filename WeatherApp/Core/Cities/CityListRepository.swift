@@ -15,7 +15,7 @@ protocol CityListRepositoryProtocol {
 }
 
 final class CityListRepository: CityListRepositoryProtocol {
-     
+
     private var coreDataManager: CoreDataManaging
 
     init(coreDataManager: CoreDataManaging = CoreDataManager.shared) {

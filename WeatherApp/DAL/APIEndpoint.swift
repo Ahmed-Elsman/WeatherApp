@@ -30,14 +30,14 @@ extension APIEndpoint {
     var baseURL: URL {
         return ConfigurationManager.shared.baseURL
     }
-    
+
     var urlComponents: URLComponents {
         var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
         components.queryItems = queryItems
         components.queryItems?.append(URLQueryItem(name: "appid", value: ConfigurationManager.shared.apiKey))
         return components
     }
-    
+
     var request: URLRequest {
         var request = URLRequest(url: urlComponents.url!)
         request.httpMethod = requestType.rawValue

@@ -16,13 +16,13 @@ protocol CoreDataManaging {
 
 class CoreDataManager: CoreDataManaging {
     static let shared = CoreDataManager()
-    
+
     private init() {}
-    
+
     var context: NSManagedObjectContext {
         return PersistenceController.shared.context
     }
-    
+
     func fetchCities() -> [CityDAO] {
         let request: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
         do {
@@ -31,28 +31,28 @@ class CoreDataManager: CoreDataManaging {
             return []
         }
     }
-    
+
     func addCity(name: String) {
         let city = CityDAO(context: context)
         city.name = name
         city.id = Int32(UUID().generateRandomInt())
         saveContext()
     }
-    
+
     func updateCity(with updatedCity: City) {
         let fetchRequest: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
         fetchRequest.fetchLimit = 1
         fetchRequest.predicate = NSPredicate(format: "name == %@", updatedCity.name)
-        
+
         do {
             let results = try context.fetch(fetchRequest)
             if let existingCity = results.first {
-                
+
                 // Update the existing city's properties
                 existingCity.id = Int32(updatedCity.id)
                 existingCity.base = updatedCity.base
                 existingCity.visibility = Int32(updatedCity.visibility)
-                
+
                 if let coord = updatedCity.coord {
                     existingCity.coord = coord.toModel()
                     existingCity.coord?.city = existingCity
@@ -65,7 +65,7 @@ class CoreDataManager: CoreDataManaging {
                     existingCity.wind = wind.toModel()
                     existingCity.wind?.city = existingCity
                 }
-                
+
                 // Append weather of updatedCity to existingCity weather
                 if let weather = updatedCity.weather?.first {
                     let weatherCopy = WeatherDAO(context: context)
@@ -85,12 +85,12 @@ class CoreDataManager: CoreDataManaging {
             print("Failed to fetch city for updating: \(error)")
         }
     }
-    
+
     func deleteCity(_ city: CityDAO) {
         context.delete(city)
         saveContext()
     }
-    
+
     private func saveContext() {
         PersistenceController.shared.saveContext()
     }

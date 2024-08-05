@@ -19,4 +19,3 @@ struct LoadingView: View {
         .background(Color(.systemBackground)) // Optional: Adjust background color if needed
     }
 }
-

@@ -11,7 +11,7 @@ struct ImageLoaderView: View {
     var imageURL: URL
     var contentMode: ContentMode
     var body: some View {
-        
+
         Rectangle()
             .opacity(0.0001)
             .overlay(
@@ -23,7 +23,7 @@ struct ImageLoaderView: View {
                 } placeholder: {
                     ProgressView()
                 }
-                
+
             )
             .clipped()
     }
