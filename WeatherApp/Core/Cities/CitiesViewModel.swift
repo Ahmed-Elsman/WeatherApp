@@ -17,6 +17,10 @@ final class CitiesViewModel: ObservableObject {
         cities.removeAll()
         cities = cityListRepository.fetchCities()
     }
+    
+    func setCities(_ cities: [CityDAO]) {
+        self.cities = cities
+    }
 
     func addCity(name: String) {
         if !isCityAlreadyAdded(name: name) {
