@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 final class CityDetailViewModel: ObservableObject {
     @Published var weather: WeatherDAO?

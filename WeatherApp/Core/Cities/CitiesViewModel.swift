@@ -5,8 +5,6 @@
 //  Created by Ahmed Elsman on 04/08/2024.
 //
 
-import Combine
-
 final class CitiesViewModel: ObservableObject {
     @Published private(set) var cities: [CityDAO] = []
     private let cityListRepository: CityListRepositoryProtocol
