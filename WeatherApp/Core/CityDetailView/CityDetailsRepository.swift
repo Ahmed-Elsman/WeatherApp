@@ -27,8 +27,8 @@ final class CityDetailsRepository: CityRepositoryProtocol {
         let data: Data = try await networkManager.fetchData(from: endpoint.request)
         let cityResponse: City = try JSONDecoder().decode(City.self, from: data)
         
-        let updatedCity = cityResponse.toModel()
-        coreDataManager.updateCity(with: updatedCity)
+//        let updatedCity = cityResponse.toModel()
+        coreDataManager.updateCity(with: cityResponse)
         return cityResponse
     }
 }

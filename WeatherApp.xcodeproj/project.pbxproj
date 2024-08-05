@@ -37,6 +37,7 @@
 		277AF23A2C5FC7B400270AAE /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2392C5FC7B400270AAE /* Int+Extensions.swift */; };
 		277AF23C2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */; };
 		277AF23E2C5FCDDC00270AAE /* CityListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */; };
+		277AF2402C60A94400270AAE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23F2C60A94400270AAE /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		277AF2392C5FC7B400270AAE /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		277AF23B2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction + Extensions.swift"; sourceTree = "<group>"; };
 		277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListRepository.swift; sourceTree = "<group>"; };
+		277AF23F2C60A94400270AAE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				277AF2282C5FA63500270AAE /* Wind.swift */,
 				277AF2262C5FA62900270AAE /* Main.swift */,
 				277AF2242C5FA61E00270AAE /* History.swift */,
+				277AF23F2C60A94400270AAE /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				277AF2062C5F867900270AAE /* City.swift in Sources */,
 				277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */,
 				277AF2092C5F9A1D00270AAE /* CityDetailView.swift in Sources */,
+				277AF2402C60A94400270AAE /* Weather.swift in Sources */,
 				277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */,
 				277AF2332C5FAF8100270AAE /* APIEndpoint.m in Sources */,
 				277AF21B2C5F9E7300270AAE /* APIError.swift in Sources */,

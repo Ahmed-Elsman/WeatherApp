@@ -11,7 +11,7 @@ protocol CoreDataManaging {
     func fetchCities() -> [CityDAO]
     func addCity(name: String)
     func deleteCity(_ city: CityDAO)
-    func updateCity(with updatedCity: CityDAO)
+    func updateCity(with updatedCity: City)
 }
 
 class CoreDataManager: CoreDataManaging {
@@ -39,27 +39,48 @@ class CoreDataManager: CoreDataManaging {
         saveContext()
     }
     
-    func updateCity(with updatedCity: CityDAO) {
+    func updateCity(with updatedCity: City) {
         let fetchRequest: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
         fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "id == %d", updatedCity.id)
-
+        fetchRequest.predicate = NSPredicate(format: "name == %@", updatedCity.name)
+        
         do {
             let results = try context.fetch(fetchRequest)
             if let existingCity = results.first {
-                // Update the existing city's properties
-                existingCity.name = updatedCity.name
                 
-                // Fetch the old city to delete if necessary
-                let oldFetchRequest: NSFetchRequest<CityDAO> = CityDAO.fetchRequest()
-                oldFetchRequest.predicate = NSPredicate(format: "id != %d AND name == %@", updatedCity.id, updatedCity.name ?? "")
-                let oldResults = try context.fetch(oldFetchRequest)
-                for oldCity in oldResults {
-                    context.delete(oldCity)
+                // Update the existing city's properties
+                existingCity.id = Int32(updatedCity.id)
+                existingCity.base = updatedCity.base
+                existingCity.visibility = Int32(updatedCity.visibility)
+                
+                if let coord = updatedCity.coord {
+                    existingCity.coord = coord.toModel()
+                    existingCity.coord?.city = existingCity
+                }
+                if let main = updatedCity.main {
+                    existingCity.main = main.toModel()
+                    existingCity.main?.city = existingCity
+                }
+                if let wind = updatedCity.wind {
+                    existingCity.wind = wind.toModel()
+                    existingCity.wind?.city = existingCity
                 }
                 
+                // Append weather of updatedCity to existingCity weather
+                if let updatedWeather = updatedCity.weather {
+                    for weather in updatedWeather {
+                        let weatherCopy = WeatherDAO(context: context)
+                        weatherCopy.id = Int32(weather.id)
+                        weatherCopy.main = weather.main
+                        weatherCopy.descriptions = weather.description
+                        weatherCopy.icon = weather.icon
+                        weatherCopy.city = existingCity
+                        existingCity.addToWeather(weatherCopy)
+                    }
+                }
                 saveContext()
             } else {
+                // TODO: Show an alert if there is an error when fetching or updating data
                 print("City not found")
             }
         } catch {
