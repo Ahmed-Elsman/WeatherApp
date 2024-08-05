@@ -57,3 +57,53 @@ extension City: Hashable {
         hasher.combine(name)
     }
 }
+
+extension CityDAO {
+    func toModel() -> City {
+        return City(
+            coord: self.coord?.toModel(),
+            base: self.base,
+            main: self.main?.toModel(),
+            wind: self.wind?.toModel(),
+            visibility: Int(self.visibility),
+            id: Int(self.id),
+            name: self.name ?? "",
+            weather: (self.weather as? Set<WeatherDAO>)?.map { $0.toModel() }
+        )
+    }
+}
+
+extension CoordDAO {
+    func toModel() -> Coord {
+        return Coord(lon: self.lon, lat: self.lat)
+    }
+}
+
+extension MainDAO {
+    func toModel() -> Main {
+        return Main(
+            temp: self.temp + 273.15,
+            humidity: Int(self.humidity)
+        )
+    }
+}
+
+extension WindDAO {
+    func toModel() -> Wind {
+        return Wind(
+            speed: self.speed
+        )
+    }
+}
+
+extension WeatherDAO {
+    func toModel() -> Weather {
+        return Weather(
+            id: Int(self.id),
+            main: self.main ?? "",
+            description: self.descriptions ?? "",
+            icon: self.icon ?? "",
+            dateTime: self.dateTime
+        )
+    }
+}

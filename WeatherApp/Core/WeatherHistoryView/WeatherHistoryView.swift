@@ -15,7 +15,9 @@ struct WeatherHistoryView: View {
         NavigationView {
             VStack {
                 List(viewModel.weatherHistory, id: \.dateTime) { weather in
-                    WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
+                    NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: weather.city?.name ?? "", weather: weather))) {
+                        WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
+                    }
                 }
                 .navigationTitle(viewModel.cityName)
             }

@@ -14,7 +14,7 @@ struct CityDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: UIConstants.containerViewPadding) {
                 if let city = viewModel.city {
-                    if let weather = city.weather?.first {
+                    if let weather = city.weather?.first(where: {$0.dateTime == viewModel.weather?.dateTime}){
                         weatherSection(weather)
                     }
                     
