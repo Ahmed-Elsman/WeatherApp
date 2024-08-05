@@ -14,13 +14,17 @@ struct WeatherHistoryView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.weatherHistory, id: \.dateTime) { weather in
-                    NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: weather.city?.name ?? "", weather: weather))) {
-                        WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
+                if viewModel.weatherHistory.isEmpty {
+                    NoDataView()
+                } else {
+                    List(viewModel.weatherHistory, id: \.dateTime) { weather in
+                        NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: weather.city?.name ?? "", weather: weather))) {
+                            WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
+                        }
                     }
                 }
-                .navigationTitle(viewModel.cityName)
             }
+            .navigationTitle(viewModel.cityName)
             .navigationBarItems(leading: Button("Done") {
                 isPresented = false
             })
@@ -30,4 +34,3 @@ struct WeatherHistoryView: View {
         }
     }
 }
-

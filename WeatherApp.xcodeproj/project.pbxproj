@@ -44,6 +44,7 @@
 		277AF24D2C60E47C00270AAE /* WeatherHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24C2C60E47C00270AAE /* WeatherHistoryCell.swift */; };
 		277AF24F2C60E53500270AAE /* WeatherHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */; };
 		27D318EE2C610B5700734420 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318ED2C610B5700734420 /* LoadingView.swift */; };
+		27D318F02C610E8900734420 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318EF2C610E8900734420 /* NoDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		277AF24C2C60E47C00270AAE /* WeatherHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryCell.swift; sourceTree = "<group>"; };
 		277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryCellViewModel.swift; sourceTree = "<group>"; };
 		27D318ED2C610B5700734420 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		27D318EF2C610E8900734420 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				277AF2452C60C72100270AAE /* ImageLoaderView.swift */,
 				27D318ED2C610B5700734420 /* LoadingView.swift */,
+				27D318EF2C610E8900734420 /* NoDataView.swift */,
 				277AF1FE2C5F6F1900270AAE /* CityCell */,
 				277AF2502C60E56400270AAE /* WeatherHistoryCell */,
 			);
@@ -369,6 +372,7 @@
 				277AF24B2C60CDC100270AAE /* WeatherHistoryViewModel.swift in Sources */,
 				277AF2272C5FA62900270AAE /* Main.swift in Sources */,
 				277AF21D2C5F9E7300270AAE /* PresenterState.swift in Sources */,
+				27D318F02C610E8900734420 /* NoDataView.swift in Sources */,
 				277AF2212C5FA1F200270AAE /* CityDetailViewModel.swift in Sources */,
 				277AF2292C5FA63500270AAE /* Wind.swift in Sources */,
 				277AF22F2C5FAF3C00270AAE /* URLSessionProtocol.m in Sources */,
