@@ -18,3 +18,11 @@ class MockCityRepository: CityRepositoryProtocol {
         return mockCity!
     }
 }
+
+class MockCityDetailsRepository: CityRepositoryProtocol {
+    func fetchCityWeather(cityName: String) async throws -> City {
+        let cityObjectData = DataLoader().loadJsonData(file: "city_object")!
+        let city = try? JSONDecoder().decode(City.self, from: cityObjectData)
+        return city!
+    }
+}
