@@ -11,8 +11,16 @@ struct CitiesView: View {
     @StateObject var viewModel: CitiesViewModel
     
     var body: some View {
+        
         NavigationView {
-            citiesList()
+            VStack{
+                if viewModel.cities.isEmpty {
+                    NoDataView(iconName: "exclamationmark.triangle",
+                               message: "No Cities are added, Add new city please")
+                } else {
+                    citiesList()
+                }
+            }
             .navigationTitle("Cities")
             .navigationBarItems(trailing: Button(action: {
                 showAddCityAlert()
@@ -44,7 +52,6 @@ struct CitiesView: View {
                     Label("Delete", systemImage: "trash")
                 }
             }
-            .buttonStyle(PlainButtonStyle())
     }
     
     private func showAddCityAlert() {

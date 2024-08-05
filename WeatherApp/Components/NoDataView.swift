@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct NoDataView: View {
+    var iconName: String
+    var message: String
+    
     var body: some View {
         VStack {
-            Image(systemName: "exclamationmark.triangle")
+            Image(systemName: iconName)
                 .font(.largeTitle)
                 .foregroundColor(.gray)
-            Text("No Historical Data Available Yet.")
+            Text(message)
                 .font(.headline)
                 .foregroundColor(.gray)
                 .padding()

@@ -15,7 +15,7 @@ struct WeatherHistoryView: View {
         NavigationView {
             VStack {
                 if viewModel.weatherHistory.isEmpty {
-                    NoDataView()
+                    NoDataView(iconName: "exclamationmark.triangle", message: "No City History Data Available Yet.")
                 } else {
                     List(viewModel.weatherHistory, id: \.dateTime) { weather in
                         NavigationLink(destination: CityDetailView(viewModel: CityDetailViewModel(cityName: weather.city?.name ?? "", weather: weather))) {

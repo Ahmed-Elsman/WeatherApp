@@ -20,6 +20,7 @@ struct CityCellView: View {
                 }) {
                     Image(systemName: "info.circle")
                 }
+                .buttonStyle(PlainButtonStyle())
             }
             .fullScreenCover(isPresented: $viewModel.showingWeatherHistory) {
                 WeatherHistoryView(
