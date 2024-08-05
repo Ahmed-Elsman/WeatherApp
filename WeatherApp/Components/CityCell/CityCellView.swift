@@ -14,13 +14,20 @@ struct CityCellView: View {
         HStack {
             Text(viewModel.cityName)
             Spacer()
-            Button(action: {
-                viewModel.showingWeatherHistory.toggle()
-            }) {
-                Image(systemName: "info.circle")
+            ZStack {
+                Button(action: {
+                    viewModel.showingWeatherHistory = true
+                }) {
+                    Image(systemName: "info.circle")
+                }
             }
-            .sheet(isPresented: $viewModel.showingWeatherHistory) {
-                WeatherHistoryView(viewModel: WeatherHistoryViewModel(city: viewModel.city))
+            .fullScreenCover(isPresented: $viewModel.showingWeatherHistory) {
+                WeatherHistoryView(
+                    viewModel: WeatherHistoryViewModel(
+                        city: viewModel.city
+                    ),
+                    isPresented: $viewModel.showingWeatherHistory
+                )
             }
         }
         .padding()

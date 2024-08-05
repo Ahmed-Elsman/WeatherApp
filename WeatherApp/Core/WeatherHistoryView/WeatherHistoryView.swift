@@ -9,21 +9,29 @@ import SwiftUI
 
 struct WeatherHistoryView: View {
     @ObservedObject var viewModel: WeatherHistoryViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
-        List(viewModel.weatherHistory) { weather in
-            HStack {
-                Text(weather.dateTime?.dateTimeString() ?? "")
-                    .font(.caption)
-                Spacer()
-                Text(weather.descriptions ?? "")
-                    .font(.body)
+        NavigationView {
+            VStack {
+                List(viewModel.weatherHistory) { weather in
+                    HStack {
+                        Text(weather.dateTime?.dateTimeString() ?? "")
+                            .font(.caption)
+                        Spacer()
+                        Text(weather.descriptions ?? "")
+                            .font(.body)
+                    }
+                    .padding()
+                }
+                .navigationTitle(viewModel.cityName)
             }
-            .padding()
-        }
-        .navigationTitle(viewModel.cityName)
-        .onAppear {
-            viewModel.fetchWeatherHistory()
+            .navigationBarItems(leading: Button("Done") {
+                isPresented = false
+            })
+            .onAppear {
+                viewModel.fetchWeatherHistory()
+            }
         }
     }
 }

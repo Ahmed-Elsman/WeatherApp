@@ -44,6 +44,7 @@ struct CitiesView: View {
                     Label("Delete", systemImage: "trash")
                 }
             }
+            .buttonStyle(PlainButtonStyle())
     }
     
     private func showAddCityAlert() {
