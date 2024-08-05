@@ -14,9 +14,8 @@ struct WeatherHistoryView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.weatherHistory) { weather in
+                List(viewModel.weatherHistory, id: \.dateTime) { weather in
                     WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
-                    .padding()
                 }
                 .navigationTitle(viewModel.cityName)
             }
@@ -29,3 +28,4 @@ struct WeatherHistoryView: View {
         }
     }
 }
+

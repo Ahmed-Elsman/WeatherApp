@@ -67,17 +67,17 @@ class CoreDataManager: CoreDataManaging {
                 }
                 
                 // Append weather of updatedCity to existingCity weather
-                if let updatedWeather = updatedCity.weather {
-                    for weather in updatedWeather {
+                if let weather = updatedCity.weather?.first {
+//                    for weather in updatedWeather {
                         let weatherCopy = WeatherDAO(context: context)
                         weatherCopy.id = Int32(weather.id)
                         weatherCopy.main = weather.main
                         weatherCopy.descriptions = weather.description
                         weatherCopy.icon = weather.icon
                         weatherCopy.city = existingCity
-                        weatherCopy.dateTime = Date()
+                        weatherCopy.dateTime = weather.dateTime ?? Date()
                         existingCity.addToWeather(weatherCopy)
-                    }
+//                    }
                 }
                 saveContext()
             } else {
