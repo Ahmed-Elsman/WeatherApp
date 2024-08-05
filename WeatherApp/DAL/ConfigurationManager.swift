@@ -21,6 +21,6 @@ class ConfigurationManager {
     }
 
     var baseImageURL: URL {
-        return URL(string: "https://openweathermap.org/img/w")!
+        return URL(string: "https://openweathermap.org/img/w/")!
     }
 }

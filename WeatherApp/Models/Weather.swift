@@ -23,4 +23,8 @@ struct Weather: Codable {
         weather.dateTime = dateTime
         return weather
     }
+    
+    var weatherIconURL: URL? {
+        return URL(string: "\(ConfigurationManager.shared.baseImageURL)\(icon).png")
+    }
 }

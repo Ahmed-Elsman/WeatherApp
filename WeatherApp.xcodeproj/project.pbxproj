@@ -40,6 +40,7 @@
 		277AF2402C60A94400270AAE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF23F2C60A94400270AAE /* Weather.swift */; };
 		277AF2422C60BF4600270AAE /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2412C60BF4600270AAE /* Date+Extenstions.swift */; };
 		277AF2442C60C64400270AAE /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2432C60C64400270AAE /* UIConstants.swift */; };
+		277AF2462C60C72100270AAE /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF2452C60C72100270AAE /* ImageLoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		277AF23F2C60A94400270AAE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		277AF2412C60BF4600270AAE /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
 		277AF2432C60C64400270AAE /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		277AF2452C60C72100270AAE /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,7 @@
 				277AF21A2C5F9E7300270AAE /* Common */,
 				277AF20F2C5F9B7A00270AAE /* DAL */,
 				277AF2042C5F866C00270AAE /* Models */,
-				277AF1FB2C5F6EE600270AAE /* Shared */,
+				277AF1FB2C5F6EE600270AAE /* Components */,
 				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
 				277AF1EB2C5F5FC300270AAE /* Persistence.swift */,
@@ -158,12 +160,13 @@
 			path = Cities;
 			sourceTree = "<group>";
 		};
-		277AF1FB2C5F6EE600270AAE /* Shared */ = {
+		277AF1FB2C5F6EE600270AAE /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				277AF1FE2C5F6F1900270AAE /* CityCell */,
+				277AF2452C60C72100270AAE /* ImageLoaderView.swift */,
 			);
-			path = Shared;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		277AF1FE2C5F6F1900270AAE /* CityCell */ = {
@@ -321,6 +324,7 @@
 				277AF2102C5F9B7A00270AAE /* APIEndpoint.swift in Sources */,
 				277AF1FA2C5F6E9D00270AAE /* CitiesViewModel.swift in Sources */,
 				277AF23C2C5FCA5A00270AAE /* UIAlertAction + Extensions.swift in Sources */,
+				277AF2462C60C72100270AAE /* ImageLoaderView.swift in Sources */,
 				277AF2062C5F867900270AAE /* City.swift in Sources */,
 				277AF1EF2C5F5FC300270AAE /* WeatherApp.xcdatamodeld in Sources */,
 				277AF2092C5F9A1D00270AAE /* CityDetailView.swift in Sources */,

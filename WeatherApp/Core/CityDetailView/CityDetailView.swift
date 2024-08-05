@@ -51,6 +51,14 @@ struct CityDetailView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             
+            if let iconUrl = weather.weatherIconURL {
+                ImageLoaderView(
+                    imageURL: iconUrl,
+                    contentMode: .fit
+                )
+                .frame(width: 60, height: 60)
+            }
+            
             Text(weather.description)
                 .font(.title)
                 .fontWeight(.medium)
