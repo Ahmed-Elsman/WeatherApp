@@ -10,7 +10,7 @@
 class MockCityRepository: CityRepositoryProtocol {
     var mockCity: City?
     var shouldThrowError = false
-    
+
     func fetchCityWeather(cityName: String) async throws -> City {
         if shouldThrowError {
             throw NSError(domain: "TestError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Test error message"])

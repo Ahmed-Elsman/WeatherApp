@@ -175,7 +175,6 @@
 		277AF1E12C5F5FC100270AAE /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				277AF2382C5FB32400270AAE /* Info.plist */,
 				277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */,
 				277AF21A2C5F9E7300270AAE /* Common */,
 				277AF20F2C5F9B7A00270AAE /* DAL */,
@@ -184,6 +183,7 @@
 				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
 				27D318F82C611E2800734420 /* Launch Screen.storyboard */,
+				277AF2382C5FB32400270AAE /* Info.plist */,
 				27D318FC2C61291700734420 /* Localizable.xcstrings */,
 				277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */,
 				277AF1E82C5F5FC300270AAE /* Preview Content */,

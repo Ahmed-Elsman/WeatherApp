@@ -27,7 +27,7 @@ class CitiesViewModelTests: XCTestCase {
     func testFetchCities() {
         let citiesObjectData = DataLoader().loadJsonData(file: "city_collection")!
         let cities = try? JSONDecoder().decode([City].self, from: citiesObjectData)
-        
+
         if let mappedCities = cities?.map({ $0.toModel() }) {
             mockRepository.cities = mappedCities
             viewModel.fetchCities()
@@ -46,7 +46,7 @@ class CitiesViewModelTests: XCTestCase {
     func testDeleteCity() {
         let citiesObjectData = DataLoader().loadJsonData(file: "city_collection")!
         let cities = try? JSONDecoder().decode([City].self, from: citiesObjectData)
-        
+
         if let mappedCities = cities?.map({ $0.toModel() }) {
             mockRepository.cities = mappedCities
         }
@@ -59,7 +59,7 @@ class CitiesViewModelTests: XCTestCase {
     func testIsCityAlreadyAdded() {
         let citiesObjectData = DataLoader().loadJsonData(file: "city_collection")!
         let cities = try? JSONDecoder().decode([City].self, from: citiesObjectData)
-        
+
         if let mappedCities = cities?.map({ $0.toModel() }) {
             mockRepository.cities = mappedCities
             viewModel.fetchCities()
@@ -68,4 +68,3 @@ class CitiesViewModelTests: XCTestCase {
         }
     }
 }
-

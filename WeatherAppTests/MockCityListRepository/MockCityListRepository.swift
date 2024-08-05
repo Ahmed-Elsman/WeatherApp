@@ -17,7 +17,7 @@ class MockCityListRepository: CityListRepositoryProtocol {
     func addCity(name: String) {
         let cityObjectData = DataLoader().loadJsonData(file: "city_object")!
         let city = try? JSONDecoder().decode(City.self, from: cityObjectData)
-        
+
         if let mappedCity = city?.toModel() {
             cities.append(mappedCity)
         }
