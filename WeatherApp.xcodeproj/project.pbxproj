@@ -45,6 +45,7 @@
 		277AF24F2C60E53500270AAE /* WeatherHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */; };
 		27D318EE2C610B5700734420 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318ED2C610B5700734420 /* LoadingView.swift */; };
 		27D318F02C610E8900734420 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D318EF2C610E8900734420 /* NoDataView.swift */; };
+		27D318F92C611E2800734420 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D318F82C611E2800734420 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		277AF24E2C60E53500270AAE /* WeatherHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryCellViewModel.swift; sourceTree = "<group>"; };
 		27D318ED2C610B5700734420 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		27D318EF2C610E8900734420 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		27D318F82C611E2800734420 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7D5076FBF90A63DC4B73DD3A /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				277AF1FB2C5F6EE600270AAE /* Components */,
 				277AF1F52C5F63BB00270AAE /* Core */,
 				277AF1E62C5F5FC300270AAE /* Assets.xcassets */,
+				27D318F82C611E2800734420 /* Launch Screen.storyboard */,
 				277AF1ED2C5F5FC300270AAE /* WeatherApp.xcdatamodeld */,
 				277AF1E82C5F5FC300270AAE /* Preview Content */,
 			);
@@ -349,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D318F92C611E2800734420 /* Launch Screen.storyboard in Resources */,
 				277AF1EA2C5F5FC300270AAE /* Preview Assets.xcassets in Resources */,
 				277AF1E72C5F5FC300270AAE /* Assets.xcassets in Resources */,
 			);
@@ -538,6 +542,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -575,6 +580,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
