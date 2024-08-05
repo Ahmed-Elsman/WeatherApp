@@ -58,6 +58,7 @@ final class CoreDataManagerTests: XCTestCase {
         let cityName = "NewCity"
 
         // When
+        clearData()
         coreDataManager.addCity(name: cityName)
         let cities = coreDataManager.fetchCities()
 
