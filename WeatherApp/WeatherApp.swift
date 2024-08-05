@@ -1,5 +1,5 @@
 //
-//  WeatherAppApp.swift
+//  WeatherApp.swift
 //  WeatherApp
 //
 //  Created by Ahmed Elsman on 04/08/2024.

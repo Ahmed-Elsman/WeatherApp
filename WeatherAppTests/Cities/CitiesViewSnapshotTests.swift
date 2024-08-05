@@ -38,14 +38,13 @@ class CitiesViewSnapshotTests: XCTestCase {
 
         if let mappedCities = cities?.map({ $0.toModel() }) {
             viewModel.setCities(mappedCities)
-            
+
             // Create the view
             let citiesView = CitiesView(viewModel: self.viewModel)
-            
+
             // Use SnapshotTesting to verify the view's appearance
             let viewController = UIHostingController(rootView: citiesView)
             assertSnapshot(of: viewController, as: .image)
         }
     }
 }
-

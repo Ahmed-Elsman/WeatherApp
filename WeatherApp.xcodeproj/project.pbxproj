@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		277AF1E32C5F5FC100270AAE /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */; };
+		277AF1E32C5F5FC100270AAE /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1E22C5F5FC100270AAE /* WeatherApp.swift */; };
 		277AF1E72C5F5FC300270AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277AF1E62C5F5FC300270AAE /* Assets.xcassets */; };
 		277AF1EA2C5F5FC300270AAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277AF1E92C5F5FC300270AAE /* Preview Assets.xcassets */; };
 		277AF1EC2C5F5FC300270AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AF1EB2C5F5FC300270AAE /* Persistence.swift */; };
@@ -77,7 +77,7 @@
 
 /* Begin PBXFileReference section */
 		277AF1DF2C5F5FC100270AAE /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
+		277AF1E22C5F5FC100270AAE /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		277AF1E62C5F5FC300270AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		277AF1E92C5F5FC300270AAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		277AF1EB2C5F5FC300270AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -183,9 +183,9 @@
 		277AF1E12C5F5FC100270AAE /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				277AF1E22C5F5FC100270AAE /* WeatherAppApp.swift */,
-				277AF21A2C5F9E7300270AAE /* Common */,
+				277AF1E22C5F5FC100270AAE /* WeatherApp.swift */,
 				277AF20F2C5F9B7A00270AAE /* DAL */,
+				277AF21A2C5F9E7300270AAE /* Common */,
 				277AF2042C5F866C00270AAE /* Models */,
 				277AF1FB2C5F6EE600270AAE /* Components */,
 				277AF1F52C5F63BB00270AAE /* Core */,
@@ -222,7 +222,6 @@
 			children = (
 				277AF1F72C5F63DB00270AAE /* CitiesView.swift */,
 				277AF1F92C5F6E9D00270AAE /* CitiesViewModel.swift */,
-				277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */,
 			);
 			path = Cities;
 			sourceTree = "<group>";
@@ -273,7 +272,6 @@
 			children = (
 				277AF2082C5F9A1D00270AAE /* CityDetailView.swift */,
 				277AF2202C5FA1F200270AAE /* CityDetailViewModel.swift */,
-				277AF2222C5FA23100270AAE /* CityDetailsRepository.swift */,
 			);
 			path = CityDetailView;
 			sourceTree = "<group>";
@@ -285,6 +283,7 @@
 				277AF20A2C5F9B7A00270AAE /* APIEndpoint.swift */,
 				277AF20C2C5F9B7A00270AAE /* CityWeatherDetailsEndpoint.swift */,
 				277AF20D2C5F9B7A00270AAE /* ConfigurationManager.swift */,
+				27D3193E2C6175C600734420 /* Repositories */,
 				277AF22D2C5FAED200270AAE /* NetworkLayerObjc */,
 				277AF2012C5F706500270AAE /* CoreDataManager */,
 			);
@@ -426,6 +425,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27D3193E2C6175C600734420 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				277AF2222C5FA23100270AAE /* CityDetailsRepository.swift */,
+				277AF23D2C5FCDDC00270AAE /* CityListRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,7 +583,7 @@
 				277AF2132C5F9B7A00270AAE /* ConfigurationManager.swift in Sources */,
 				277AF2422C60BF4600270AAE /* Date+Extenstions.swift in Sources */,
 				277AF22B2C5FA64000270AAE /* Coord.swift in Sources */,
-				277AF1E32C5F5FC100270AAE /* WeatherAppApp.swift in Sources */,
+				277AF1E32C5F5FC100270AAE /* WeatherApp.swift in Sources */,
 				277AF2032C5F708B00270AAE /* CoreDataManager.swift in Sources */,
 				27D318EE2C610B5700734420 /* LoadingView.swift in Sources */,
 				277AF2002C5F6F2A00270AAE /* CityCellViewModel.swift in Sources */,
