@@ -21,6 +21,13 @@ The app is structured using the MVVM architecture to separate concerns and impro
 - **ViewModel**: Handles the business logic and provides data to the views using a Repository design pattern.
 - **Repository**
 
+## Code Coverage
+
+The current code coverage of the project.
+
+<img src="./images/codeCoverage.jpg"  width="75%" height="50%">
+
+
 ## Installation
 
 1. Clone the repository:
