@@ -15,13 +15,7 @@ struct WeatherHistoryView: View {
         NavigationView {
             VStack {
                 List(viewModel.weatherHistory) { weather in
-                    HStack {
-                        Text(weather.dateTime?.dateTimeString() ?? "")
-                            .font(.caption)
-                        Spacer()
-                        Text(weather.descriptions ?? "")
-                            .font(.body)
-                    }
+                    WeatherHistoryCell(viewModel: WeatherHistoryCellViewModel(weather: weather))
                     .padding()
                 }
                 .navigationTitle(viewModel.cityName)
